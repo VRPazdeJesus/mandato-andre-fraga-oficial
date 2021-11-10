@@ -1,5 +1,7 @@
 {
   "name": "mandato-andre-fraga-oficial",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
