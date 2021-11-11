@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+  <div class="container-fluid">
+    <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+    <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
+  </div>
+  <div class="container-fluid menu-space-second-nav">
+    <div class="row w-100">
+      <div 
+        class="col-3 personal-links-menu" 
+        [ngClass]="{'component-active' : page === 'home'}" 
+        (click)="proximo('home')">
+        <span [ngClass]="{'project-text-white' : page !== 'home'}">Bio</span>
+      </div>
+      <div 
+        class="col-3 personal-links-menu" 
+        [ngClass]="{'component-active' : page === 'nosso-mandato'}" 
+        (click)="proximo('nosso-mandato')">
+        <span [ngClass]="{'project-text-white' : page !== 'nosso-mandato'}">Mandato</span>
+      </div>
+      <div 
+        class="col-3 personal-links-menu" 
+        [ngClass]="{'component-active' : page === 'colabore'}" 
+        (click)="proximo('colabore')">
+        <span [ngClass]="{'project-text-white' : page !== 'colabore'}">Colabore</span>
+      </div>
+      <div 
+        class="col-3 personal-links-menu" 
+        [ngClass]="{'component-active' : page === 'contato'}" 
+        (click)="proximo('contato')">
+        <span [ngClass]="{'project-text-white' : page !== 'contato'}">Contato</span>
+      </div>
+    </div>
+  </div>
+</nav>
