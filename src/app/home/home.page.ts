@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { PostPage } from '../modal/post/post.page';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,10 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(private nav:NavController) {}
+  constructor(
+    private nav:NavController,
+    public modalController: ModalController
+  ) {}
 
   // controll de inicial slide and speed transiction
   slideOpts = {
@@ -21,5 +25,18 @@ export class HomePage {
     this.nav.navigateForward('/'+values);
   }
   
+  // show post modal
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: PostPage,
+      //cssClass: 'my-custom-class',
+      componentProps: {
+        'firstName': 'Douglas',
+        'lastName': 'Adams',
+        'middleInitial': 'N'
+      }
+    });
+    return await modal.present();
+  }
 
 }
