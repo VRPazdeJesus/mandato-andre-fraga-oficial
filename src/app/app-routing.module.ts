@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'post',
+    loadChildren: () => import('./modal/post/post.module').then( m => m.PostPageModule)
+  },
+  {
+    path: 'recupera-senha',
+    loadChildren: () => import('./recupera-senha/recupera-senha.module').then( m => m.RecuperaSenhaPageModule)
+  },
 ];
 
 @NgModule({

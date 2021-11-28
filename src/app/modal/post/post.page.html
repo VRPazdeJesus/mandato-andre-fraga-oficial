@@ -1,0 +1,35 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="dismiss()">X</button>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-5">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="component-text-grey mb-0">24/03/2021</p>
+        <p class="title-post component-active mb-1">CANTEIROS COLETIVOS</p>
+        <div class="text-center">
+          <img style="vertical-align: bottom;" src="../../assets/hr.png" alt="divisão">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-12 space-to-footer">
+          <img class="mt-4 w-100 mb-4" src="../../assets/post-canteiro.png" alt="canteiro" style="z-index: 1;">
+          <p class="card-text component-text-black container-text">O movimento Canteiros Coletivos é uma iniciativa cidadã, autônoma e apartidária de recuperação de praças e canteiros abandonados da cidade de Salvador.</p>
+        </div>
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'post'">
+    </app-footer>
+  </div>
+</ion-content>
