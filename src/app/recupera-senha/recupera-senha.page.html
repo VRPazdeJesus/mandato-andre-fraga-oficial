@@ -1,0 +1,52 @@
+<ion-content>
+  <!-- menu -->
+  <app-nav 
+    [page]="'recupera-senha'">
+  </app-nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center mt-3">
+          <img src="../../assets/colabore.png" alt="Colabore">
+        </div>
+      </div>
+    </div>
+    <div class="component-bg-grey">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 space-to-footer text-center">
+            <h2 class="component-text-black-v2 mt-4 fw-bold">Recuperação de senha</h2>
+              <div class="mt-4 mb-4">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Informe o e-mail cadastrado</label>
+                  <input [(ngModel)]="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="andre.fraga@gmai.com">
+                </div>
+                <div class="text-center">
+                  <div class="mb-5 d-grid gap-2">
+                    <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Recuperar senha</a> -->
+                    <button class="btn btn-block btn-secondary btn-colabore" ion-button type="submit" (click)="recoveryPassword()">Recuperar senha</button>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <p class="component-text-black component-active fw-bold">{{response}}</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <app-footer
+        [page]="'home'">
+      </app-footer>
+    </div>
+  </div>
+</ion-content>
