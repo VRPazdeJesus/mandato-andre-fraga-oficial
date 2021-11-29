@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import firebase from 'firebase/compat/app';
+import 'firebase/database';
 
 
 @Injectable({
@@ -7,7 +11,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class FirebaseService {
 
-  constructor(private fireauth: AngularFireAuth) { }
+  constructor(private fireauth: AngularFireAuth, private db: AngularFireDatabase) { }
 
   recoveryPassword(value) {
     return new Promise((resolve, reject) => {
@@ -16,4 +20,16 @@ export class FirebaseService {
         err => reject(err))
     })
   }
+
+  getContentPage(value: string) {
+    return new Promise((resolve, reject) => {
+      let database = firebase.database().ref('pages/'+value)
+        .once('value',(snap) => {
+            database.then(
+            res => resolve(snap.val()),
+            err => reject(err))
+        })      
+    })
+  }
+
 }

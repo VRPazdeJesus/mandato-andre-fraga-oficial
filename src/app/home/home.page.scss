@@ -25,3 +25,9 @@
 #container a {
   text-decoration: none;
 }
+
+ion-skeleton-text {
+  line-height: 13px;
+  --background-rgb: 128,128,128;
+  --border-radius: 0px;
+}
