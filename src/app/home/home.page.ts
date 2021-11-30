@@ -11,7 +11,9 @@ import { FirebaseService } from '../services/firebase.service';
 export class HomePage implements OnInit {
 
   private content: any
+  private contentPost: any
   private carousel: any = []
+  private posts: any = []
   private loadingCarousel = true
 
   constructor(
@@ -21,7 +23,8 @@ export class HomePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getCarouselPage()
+    this.getCarouselImage()
+    this.getPost()
   }
 
   // controll de inicial slide and speed transiction
@@ -36,21 +39,19 @@ export class HomePage implements OnInit {
   }
   
   // show post modal
-  async presentModal() {
+  async presentModal(post: any) {
     const modal = await this.modalController.create({
       component: PostPage,
       //cssClass: 'my-custom-class',
       componentProps: {
-        'firstName': 'Douglas',
-        'lastName': 'Adams',
-        'middleInitial': 'N'
+        'post': post
       }
     });
     return await modal.present();
   }
 
   // get image from database
-  getCarouselPage() {
+  getCarouselImage() {
     this.firebaseService.getContentPage('quem-sou/slide').then(res => {
       this.content = res
     }).then(() => {
@@ -61,6 +62,22 @@ export class HomePage implements OnInit {
       }
     }).then(() => {
       this.loadingCarousel = false
+    })
+  }
+
+  // get post from database
+  getPost() {
+    this.firebaseService.getContentPage('quem-sou/blog').then(res => {
+      this.contentPost = res
+    }).then(() => {
+      for (let key in this.contentPost) {
+        if(this.contentPost[key].status === "active") {
+          this.posts.push(this.contentPost[key])
+        }
+      }
+    }).then(() => {
+      console.log('contentPost ', this.contentPost)
+      //this.loadingCarousel = false
     })
   }
 

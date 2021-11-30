@@ -8,9 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class PostPage implements OnInit {
 
-  @Input() firstName: string;
-  @Input() lastName: string;
-  @Input() middleInitial: string;
+  @Input() post: any
 
   constructor(public modalController: ModalController) { }
 

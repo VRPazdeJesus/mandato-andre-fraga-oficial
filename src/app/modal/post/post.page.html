@@ -10,8 +10,8 @@
   <div class="container component-space-nav-5">
     <div class="row">
       <div class="col-md-12">
-        <p class="component-text-grey mb-0">24/03/2021</p>
-        <p class="title-post component-active mb-1">CANTEIROS COLETIVOS</p>
+        <p class="component-text-grey mb-0">{{ post.date }}</p>
+        <p class="title-post component-active mb-1">{{ post.title }}</p>
         <div class="text-center">
           <img style="vertical-align: bottom;" src="../../assets/hr.png" alt="divisão">
         </div>
@@ -23,8 +23,8 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-12 space-to-footer">
-          <img class="mt-4 w-100 mb-4" src="../../assets/post-canteiro.png" alt="canteiro" style="z-index: 1;">
-          <p class="card-text component-text-black container-text">O movimento Canteiros Coletivos é uma iniciativa cidadã, autônoma e apartidária de recuperação de praças e canteiros abandonados da cidade de Salvador.</p>
+          <img class="mt-4 w-100 mb-4" [src]="post.cover" alt="canteiro" style="z-index: 1;">
+          <p class="card-text component-text-black container-text">{{ post.content }}</p>
         </div>
       </div>
     </div>
