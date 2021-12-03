@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'recupera-senha',
     loadChildren: () => import('./recupera-senha/recupera-senha.module').then( m => m.RecuperaSenhaPageModule)
   },
+  {
+    path: 'contato',
+    loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
+  },
 ];
 
 @NgModule({

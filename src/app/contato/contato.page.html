@@ -1,0 +1,55 @@
+<ion-content>
+  <!-- menu -->
+  <app-nav 
+    [page]="'contato'">
+  </app-nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/contato.png" alt="Nosso Mandato">
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 space-to-footer">
+          <p class="component-text-black mt-4">Eu e minha equipe estamos a postos para fazer deste um mandato NOSSO.</p>
+          <p class="component-text-black mt-4">Portanto, se você sentiu falta de algum conteúdo no site ou mesmo deseja solicitar uma agenda, conto com a sua colaboração, com o seu contato:</p>
+          <div class="mt-4">
+            <div class="row">
+              <div class="col-2">
+                <img class="w-100" src="../../assets/icone-localizacao.png" alt="Localização">
+              </div>
+              <div class="col-10">
+                <p class="component-text-black fw-bold">Endereço do gabinete: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2">
+                <img class="w-100" src="../../assets/icone-email.png" alt="Email">
+              </div>
+              <div class="col-10">
+                <p class="component-text-black fw-bold">E-mail: andrefraga@cms.ba.gov <br>Ou agende com minha equipe através do whatsapp:</p>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 d-grid gap-2 mt-3">
+            <a target="_blank" href="https://wa.me/5571993184941?text=Olá!" role="button" class="btn btn-block btn-secondary btn-colabore"><span class="me-3"><img src="../../assets/btn-whatsapp.png" alt="Whatsapp"></span> Fale com André</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'contato'">
+    </app-footer>
+  </div>
+</ion-content>
