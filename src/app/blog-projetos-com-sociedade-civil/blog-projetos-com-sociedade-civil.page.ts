@@ -39,4 +39,16 @@ export class BlogProjetosComSociedadeCivilPage implements OnInit {
     })
   }
 
+  // show post modal
+  async presentModal(post: any) {
+    const modal = await this.modalController.create({
+      component: PostPage,
+      //cssClass: 'my-custom-class',
+      componentProps: {
+        'post': post
+      }
+    });
+    return await modal.present();
+  }
+
 }
