@@ -1,9 +1,78 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>colabore-dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <!-- menu -->
+  <app-nav 
+    [page]="'colabore'">
+  </app-nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/colabore.png" alt="Nosso Mandato">
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 space-to-footer">
+          <p class="component-text-black mt-4">Durante o mandato, este aqui é um dos canais de comunicação e colaboração, onde você poderá sugerir ideias, projetos de leis, fazer denúncias e opinar com as principais ações.</p>
+          <div class="mt-4">
+            <div class="mb-4">
+              <ion-card (click)="proximo('fazer-denuncia')" class="component-bg-light" style="border-radius: 16px;">
+                <ion-card-content>
+                  <div class="row">
+                    <div class="col-3">
+                      <img src="../../assets/icon-mega-fone.png" alt="Mega fone">
+                    </div>
+                    <div class="col-9 text-center" style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
+                      <p style="color: #4D256C; font-size: 1rem; font-weight: bold;">Fazer uma denúncia</p>
+                    </div>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div class="mb-4">
+              <ion-card (click)="proximo('sugerir-projeto-de-leis')" class="component-bg-light" style="border-radius: 16px;">
+                <ion-card-content>
+                  <div class="row">
+                    <div class="col-3">
+                      <img src="../../assets/icon-sugerir-projeto.png" alt="Mega fone">
+                    </div>
+                    <div class="col-9 text-center" style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
+                      <p style="color: #4D256C; font-size: 1rem; font-weight: bold;">Sugerir projeto de lei</p>
+                    </div>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div class="mb-4">
+              <ion-card (click)="proximo('edital-de-emenda')" class="component-bg-light" style="border-radius: 16px;">
+                <ion-card-content>
+                  <div class="row">
+                    <div class="col-3">
+                      <img src="../../assets/icon-inscrever-projeto.png" alt="Mega fone">
+                    </div>
+                    <div class="col-9 text-center" style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
+                      <p style="color: #4D256C; font-size: 1rem; font-weight: bold;">Ver edital de emenda</p>
+                    </div>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'colabore'">
+    </app-footer>
+  </div>
 </ion-content>
