@@ -1,0 +1,49 @@
+<ion-content>
+  <!-- menu -->
+  <app-nav 
+    [page]="'blog-projetos-com-sociedade-civil'">
+  </app-nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/sociedade-civil.png" alt="Nosso Mandato">
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="component-bg-grey">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 space-to-footer text-center">
+            <!-- lista de posts -->
+            <ion-list class="mt-4 space-to-footer component-bg-trnsparent">
+              <div class="mb-3">
+                <div *ngFor="let post of posts" class="card component-bg-trnsparent no-border mb-3" (click)="presentModal(post)">
+                  <img loading="lazy" class="card-img-top" [src]="post.cover" alt="canteiro">
+                  <div class="card-body component-bg-light card-content-slide">
+                    <h5 class="card-title project-text-secondary fw-bold">{{ post.title }}</h5>
+                    <p class="card-text component-text-black container-text">{{ post.content }}</p>
+                    <p class="post-link">Clique para saber mais</p>
+                  </div>
+                </div>
+              </div>
+            </ion-list>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <app-footer
+        [page]="'blog-projetos-com-sociedade-civil'">
+      </app-footer>
+    </div>
+  </div>
+</ion-content>
