@@ -1,0 +1,68 @@
+<ion-content>
+  <!-- menu -->
+  <app-nav 
+    [page]="'colabore'">
+  </app-nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/colabore.png" alt="Nosso Mandato">
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 space-to-footer">
+          <p class="component-text-black mt-4">Um político sozinho não faz nada. Pessoas são a chave para qualquer projeto de sucesso, são as suas motivações, ideias e energia que fazem tudo acontecer. Abaixo estão enumeradas as ações que você pode fazer dentro da nossa plataforma:</p>
+          <div class="row">
+            <div class="col-4">
+              <img src="../../assets/icon-denuncia.png" alt="Fazer uma denúncia">
+            </div>
+            <div class="col-4">
+              <img src="../../assets/icon-sugerir-leis.png" alt="Sugerir projeto">
+            </div>
+            <div class="col-4">
+              <img src="../../assets/icon-edital.png" alt="Edital de emenda">
+            </div>
+          </div>
+          <p class="component-text-black mt-4">Construímos juntas e juntos o nosso propósito, valores e ideias para a cidade. Esse movimento segue vivo e qualquer pessoa que se identificar pode contribuir. Cadastre-se!</p>
+          <div class="mt-4">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Usuário</label>
+              <input [(ngModel)]="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="andre.fraga@gmai.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label component-text-black ms-4">Senha</label>
+              <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput2" placeholder="#votenoverde">
+            </div>
+            <div class="text-center">
+              <div class="mt-5 mb-4">
+                <label (click)="proximo('recupera-senha')" class="colabore-link fw-bold">Esqueci minha senha</label>
+              </div>
+              <div class="mb-3 d-grid gap-2">
+                <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Login</a> -->
+                <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="login()">Login</button>
+              </div>
+              <div class="mb-3">
+                <p class="component-text-black">Ainda não faz parte do mandato? <span class="fw-bold" (click)="proximo('cadastro-usuario')"><label class="colabore-link">Cadastre-se</label></span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'colabore'">
+    </app-footer>
+  </div>
+</ion-content>

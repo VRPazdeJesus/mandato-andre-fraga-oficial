@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'blog-projetos-com-sociedade-civil',
     loadChildren: () => import('./blog-projetos-com-sociedade-civil/blog-projetos-com-sociedade-civil.module').then( m => m.BlogProjetosComSociedadeCivilPageModule)
   },
+  {
+    path: 'colabore',
+    loadChildren: () => import('./colabore/colabore.module').then( m => m.ColaborePageModule)
+  },
+  {
+    path: 'colabore-dashboard',
+    loadChildren: () => import('./colabore-dashboard/colabore-dashboard.module').then( m => m.ColaboreDashboardPageModule)
+  },
 ];
 
 @NgModule({
