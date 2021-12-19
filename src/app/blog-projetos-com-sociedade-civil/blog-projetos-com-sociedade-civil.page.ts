@@ -23,6 +23,11 @@ export class BlogProjetosComSociedadeCivilPage implements OnInit {
     this.getPost()
   }
 
+  // for redirect page
+  proximo(values:any) {
+    this.nav.navigateForward('/'+values);
+  }
+
   // get post from database
   getPost() {
     this.firebaseService.getContentPage('quem-sou/blog').then(res => {
