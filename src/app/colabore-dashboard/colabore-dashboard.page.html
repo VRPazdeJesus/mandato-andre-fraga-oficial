@@ -1,9 +1,134 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>colabore-dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Sair</button>
+    </div>
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('home')"><span class="project-text-white">Quem sou</span></div>
+        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></div>
+        <div class="col-3 personal-links-menu text-bottom component-active" (click)="proximo('colabore')"><span>Colabore</span></div>
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/colabore.png" alt="Nosso Mandato">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer">
+        <p class="component-text-black mt-4">Durante o mandato, este aqui é um dos canais de comunicação e colaboração, onde você poderá sugerir ideias, projetos de leis, fazer denúncias e opinar com as principais ações.</p>
+        <div class="mt-4">
+          <div class="mb-4">
+            <ion-card (click)="proximo('fazer-denuncia')" class="component-bg-light" style="border-radius: 16px;">
+              <ion-card-content>
+                <div class="row">
+                  <div class="col-3">
+                    <img src="../../assets/icon-mega-fone.png" alt="Mega fone">
+                  </div>
+                  <div class="col-9 text-center" style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
+                    <p style="color: #4D256C; font-size: 1rem; font-weight: bold;">Fazer uma denúncia</p>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+          <div class="mb-4">
+            <ion-card (click)="proximo('sugerir-projeto-de-leis')" class="component-bg-light" style="border-radius: 16px;">
+              <ion-card-content>
+                <div class="row">
+                  <div class="col-3">
+                    <img src="../../assets/icon-sugerir-projeto.png" alt="Mega fone">
+                  </div>
+                  <div class="col-9 text-center" style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
+                    <p style="color: #4D256C; font-size: 1rem; font-weight: bold;">Sugerir projeto de lei</p>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+          <div class="mb-4">
+            <ion-card (click)="proximo('edital-de-emenda')" class="component-bg-light" style="border-radius: 16px;">
+              <ion-card-content>
+                <div class="row">
+                  <div class="col-3">
+                    <img src="../../assets/icon-inscrever-projeto.png" alt="Mega fone">
+                  </div>
+                  <div class="col-9 text-center" style="display: flex; justify-content: center; align-content: center; flex-direction: column;">
+                    <p style="color: #4D256C; font-size: 1rem; font-weight: bold;">Ver edital de emenda</p>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <div class="container">
+          <div class="row">
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ME SEGUE LÁ</h6>
+            </div>
+            <!-- ícones -->
+            <div class="col-12 text-center inline-father">
+              <a href="https://twitter.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-twitter.png" alt="Twitter">
+                </div>
+              </a>
+              <a href="https://www.facebook.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-facebook.png" alt="Facebook">
+                </div>
+              </a>
+              <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-instagram.png" alt="Instagram">
+                </div>
+              </a>
+              <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-youtube.png" alt="YouTube">
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+                <div class="inline-child">
+                  <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+                </div>
+              </a>
+            </div>
+            <!-- divisor -->
+            <div class="col-12">
+              <hr class="footer-hr mt-4">
+            </div>
+            <!-- contato -->
+            <div class="col-12">
+              <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+              <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+              <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+              <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+            </div>
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
 </ion-content>
