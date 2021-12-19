@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'colabore',
     loadChildren: () => import('./colabore/colabore.module').then( m => m.ColaborePageModule)
   },
+  {
+    path: 'colabore-dashboard',
+    loadChildren: () => import('./colabore-dashboard/colabore-dashboard.module').then( m => m.ColaboreDashboardPageModule)
+  },
 ];
 
 @NgModule({
