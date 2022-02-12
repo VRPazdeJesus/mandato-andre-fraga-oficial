@@ -17,7 +17,11 @@
       <div class="col-md-12 text-center mt-3">
         <img src="../../assets/cadastro.png" alt="Cadastro de usuário">
       </div>
-      <div class="col-md-12 component-bg-grey space-to-footer">
+    </div>
+  </div>
+  <div class="component-bg-grey pt-2">
+    <div class="container">
+      <div class="col-md-12 space-to-footer">
         <div class="mt-4">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Nome completo</label>
@@ -97,60 +101,9 @@
           </div>
         </div>
       </div>
-      <!-- rodapé -->
-      <footer class="footer mt-auto py-3 component-footer z-index-up">
-        <div class="container">
-          <div class="row">
-            <!-- titulo -->
-            <div class="col-12 text-center">
-              <h6 class="project-text-white">ME SEGUE LÁ</h6>
-            </div>
-            <!-- ícones -->
-            <div class="col-12 text-center inline-father">
-              <a href="https://twitter.com/euandrefraga" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-twitter.png" alt="Twitter">
-                </div>
-              </a>
-              <a href="https://www.facebook.com/euandrefraga" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-facebook.png" alt="Facebook">
-                </div>
-              </a>
-              <a href="https://www.instagram.com/euandrefraga/" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-instagram.png" alt="Instagram">
-                </div>
-              </a>
-              <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
-                <div class="inline-child space-icon">
-                  <img src="../../assets/icon-youtube.png" alt="YouTube">
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
-                <div class="inline-child">
-                  <img src="../../assets/icon-linkedin.png" alt="Linkedin">
-                </div>
-              </a>
-            </div>
-            <!-- divisor -->
-            <div class="col-12">
-              <hr class="footer-hr mt-4">
-            </div>
-            <!-- contato -->
-            <div class="col-12">
-              <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
-              <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
-              <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
-              <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
-            </div>
-            <!-- titulo -->
-            <div class="col-12 text-center">
-              <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
+    <!-- rodapé -->
+    <app-footer [page]="'cadastro-usuario'">
+    </app-footer>
   </div>
 </ion-content>
