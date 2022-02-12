@@ -1,0 +1,167 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
+    </div>
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('home')"><span class="project-text-white">Quem sou</span></div>
+        <div class="col-3 personal-links-menu" (click)="proximo('nosso-mandato')"><span class="project-text-white">Nosso Mandato</span></div>
+        <div class="col-3 personal-links-menu text-bottom component-active" (click)="proximo('colabore')"><span>Colabore</span></div>
+        <div class="col-3 personal-links-menu text-bottom" (click)="proximo('contato')"><span class="project-text-white">Contato</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/cadastro.png" alt="Cadastro de usuário">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer">
+        <div class="mt-4">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Nome completo</label>
+            <input [(ngModel)]="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite aqui seu nome">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label component-text-black ms-4">Data de nascimento</label>
+            <input [(ngModel)]="birthDate" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Digite sua data de nascimento">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label component-text-black ms-4">Telefone</label>
+            <input [(ngModel)]="telephone" type="tel" class="form-control" id="exampleFormControlInput3" placeholder="(xx) xxxxx-xxxx">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label component-text-black ms-4">Endereço</label>
+            <input [(ngModel)]="address" type="text" class="form-control" id="exampleFormControlInput4" placeholder="Digite sua rua">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label component-text-black ms-4">Bairro</label>
+            <input [(ngModel)]="district" type="text" class="form-control" id="exampleFormControlInput5" placeholder="Informe o bairro que reside">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput6" class="form-label component-text-black ms-4">E-mail</label>
+            <input [(ngModel)]="email" type="email" class="form-control" id="exampleFormControlInput6" placeholder="Digite seu e-mail">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput7" class="form-label component-text-black ms-4">Redes sociais</label>
+            <input [(ngModel)]="socialNetwork" type="text" class="form-control" id="exampleFormControlInput7" placeholder="Link do facebook, instagram, etc.">
+          </div>
+          <div class="mb-3 ms-4">
+            <p class="component-text-black">É eleitor de André?</p>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="sim" [(ngModel)]="andreVoter">
+                <label class="form-check-label component-text-black " for="inlineRadio1">Sim</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="não" [(ngModel)]="andreVoter">
+                <label class="form-check-label component-text-black " for="inlineRadio2">Não</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 ms-4">
+            <p class="component-text-black">Participou da Rede de Embaixadores?</p>
+            <div class="form-group">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="sim" [(ngModel)]="participantAmbassadorNetwork">
+                <label class="form-check-label component-text-black " for="inlineRadio3">Sim</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="não" [(ngModel)]="participantAmbassadorNetwork">
+                <label class="form-check-label component-text-black " for="inlineRadio4">Não</label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput8" class="form-label component-text-black ms-4">Senha</label>
+            <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput8" placeholder="Digite senha de ao menos 8 dígitos">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput9" class="form-label component-text-black ms-4">Confirmar senha</label>
+            <input [(ngModel)]="confirmPassword" type="password" class="form-control" id="exampleFormControlInput9" placeholder="Digite a mesma senha acima">
+          </div>
+          <div class="mb-3 form-group form-check ms-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label component-text-black" for="exampleCheck1">Desejo receber notícias do mandato</label>
+          </div>
+          <div class="mb-3 form-group form-check ms-4">
+            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+            <label class="form-check-label component-text-black" for="exampleCheck2">Li e concordo com os termos de uso e política de privacidade. </label>
+          </div>
+          <div class="text-center">
+            <div class="mb-3 d-grid gap-2">
+              <!-- <a href="#" role="button" class="btn btn-block btn-secondary btn-colabore">Login</a> -->
+              <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="registerUser()">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <div class="container">
+          <div class="row">
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ME SEGUE LÁ</h6>
+            </div>
+            <!-- ícones -->
+            <div class="col-12 text-center inline-father">
+              <a href="https://twitter.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-twitter.png" alt="Twitter">
+                </div>
+              </a>
+              <a href="https://www.facebook.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-facebook.png" alt="Facebook">
+                </div>
+              </a>
+              <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-instagram.png" alt="Instagram">
+                </div>
+              </a>
+              <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-youtube.png" alt="YouTube">
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+                <div class="inline-child">
+                  <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+                </div>
+              </a>
+            </div>
+            <!-- divisor -->
+            <div class="col-12">
+              <hr class="footer-hr mt-4">
+            </div>
+            <!-- contato -->
+            <div class="col-12">
+              <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+              <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+              <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+              <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+            </div>
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</ion-content>
