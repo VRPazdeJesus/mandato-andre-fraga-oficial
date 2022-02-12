@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { CadastroUsuarioPageRoutingModule } from './cadastro-usuario-routing.module';
 
 import { CadastroUsuarioPage } from './cadastro-usuario.page';
+import { FooterComponent } from '../components/footer/footer.component';
+import { NavComponent } from '../components/nav/nav.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { CadastroUsuarioPage } from './cadastro-usuario.page';
     IonicModule,
     CadastroUsuarioPageRoutingModule
   ],
-  declarations: [CadastroUsuarioPage]
+  declarations: [CadastroUsuarioPage, NavComponent, FooterComponent]
 })
 export class CadastroUsuarioPageModule {}
