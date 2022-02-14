@@ -76,7 +76,6 @@ export class HomePage implements OnInit {
         }
       }
     }).then(() => {
-      console.log('contentPost ', this.contentPost)
       //this.loadingCarousel = false
     })
   }

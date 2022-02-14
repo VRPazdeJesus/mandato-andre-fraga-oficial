@@ -1,0 +1,38 @@
+<ion-content>
+  <!-- menu -->
+  <app-nav 
+    [page]="'nosso-mandato'">
+  </app-nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('home')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/nosso-mandato.svg" alt="Nosso Mandato">
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey pt-2">
+    <div class="container">
+      <div class="col-md-12 component-bg-grey space-to-footer">
+        <p class="component-text-black mt-4">Acompanhe o andamento dos projetos de lei e de indicação propostos pelo nosso mandato colaborativo. </p>
+        <p class="component-text-black">Veja também como estamos implementando as 43 ideias para Salvador, formuladas em conjunto na época da campanha. </p>
+        <p class="component-text-black">Por fim, veja as fiscalizações feitas por nós.</p>
+        <img class="w-100 mt-4" src="../../assets/card-projeto-de-lei-indicacao.svg" alt="Nosso Mandato" (click)="proximo('projeto-de-lei')">
+        <img class="w-100 mt-4" src="../../assets/card-43-ideias.svg" alt="Nosso Mandato" (click)="proximo('ideias')">
+        <img class="w-100 mt-4" src="../../assets/card-fiscalizacao.svg" alt="Nosso Mandato" (click)="proximo('fiscalizacao')">
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'nosso-mandato'">
+    </app-footer>
+  </div>
+</ion-content>
+

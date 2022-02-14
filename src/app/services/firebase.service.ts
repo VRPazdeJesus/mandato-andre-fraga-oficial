@@ -41,4 +41,27 @@ export class FirebaseService {
     })
   }
 
+  register(data: any) {
+    let day = new Date().toLocaleDateString('pt-br')
+
+    return new Promise((resolve, reject) => {
+      firebase.auth().createUserWithEmailAndPassword(data.email, data.password).then(() => {
+        firebase.database().ref('users/'+ data.name).set({
+          name: data.name,
+          birthDate: data.birthDate,
+          telephone: data.telephone,
+          address: data.address,
+          district: data.district,
+          email: data.email,
+          socialNetwork: data.socialNetwork,
+          andreVoter: data.andreVoter,
+          participantAmbassadorNetwork: data.participantAmbassadorNetwork,
+          dayregister: day
+        }).then(
+          res => resolve(res),
+          err => reject(err))
+      })
+    })
+  }
+
 }
