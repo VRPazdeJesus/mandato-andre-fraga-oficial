@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FazerDenunciaPageRoutingModule } from './fazer-denuncia-routing.module';
 
 import { FazerDenunciaPage } from './fazer-denuncia.page';
+import { FooterComponent } from '../components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { FazerDenunciaPage } from './fazer-denuncia.page';
     IonicModule,
     FazerDenunciaPageRoutingModule
   ],
-  declarations: [FazerDenunciaPage]
+  declarations: [FazerDenunciaPage, FooterComponent]
 })
 export class FazerDenunciaPageModule {}
