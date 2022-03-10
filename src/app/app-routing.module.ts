@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'nosso-mandato',
     loadChildren: () => import('./nosso-mandato/nosso-mandato.module').then( m => m.NossoMandatoPageModule)
   },
+  {
+    path: 'fazer-denuncia',
+    loadChildren: () => import('./fazer-denuncia/fazer-denuncia.module').then( m => m.FazerDenunciaPageModule)
+  },
 ];
 
 @NgModule({
