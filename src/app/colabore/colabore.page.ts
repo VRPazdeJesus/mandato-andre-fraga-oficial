@@ -21,9 +21,7 @@ export class ColaborePage implements OnInit {
   }
 
   login() {
-    console.log('primeira chamada de login')
     this.firebaseService.login(this.email, this.password).then(res => {
-      console.log('res',res)
       this.proximo('colabore-dashboard')
     })
   }
