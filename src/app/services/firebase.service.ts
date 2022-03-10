@@ -33,7 +33,6 @@ export class FirebaseService {
   }
 
   login(emailValue: any, passwordValue: any) {
-    console.log('fiz login')
     return new Promise((resolve, reject) => {
       this.fireauth.signInWithEmailAndPassword(emailValue, passwordValue).then(
         res => resolve(res),
