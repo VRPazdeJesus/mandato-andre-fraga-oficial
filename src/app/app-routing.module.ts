@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'fazer-denuncia',
     loadChildren: () => import('./fazer-denuncia/fazer-denuncia.module').then( m => m.FazerDenunciaPageModule)
   },
+  {
+    path: 'sugerir-projeto-de-leis',
+    loadChildren: () => import('./sugerir-projeto-de-leis/sugerir-projeto-de-leis.module').then( m => m.SugerirProjetoDeLeisPageModule)
+  },
 ];
 
 @NgModule({

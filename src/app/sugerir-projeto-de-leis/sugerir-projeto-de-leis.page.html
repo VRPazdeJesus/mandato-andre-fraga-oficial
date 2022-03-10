@@ -1,0 +1,85 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Sair</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>SUGERIR PROJETO DE LEI</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore-dashboard')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/sugerir-projetos-de-leis.svg" alt="Sugerir projetos de lei">
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 space-to-footer">
+          <div class="mt-4">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Título da lei</label>
+              <input [(ngModel)]="tituloDaLei" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite aqui seu nome">
+            </div>
+            <div class="mb-3">
+              <label for="inputState" class="form-label component-text-black ms-4">Categoria na qual se enquadra</label>
+              <select id="inputState" class="form-control" [(ngModel)]="categoriaDaLei">
+                <option disabled selected hidden>Selecione a categoria<i class="fas fa-angle-down"></i></option>
+                <option *ngFor="let category of categories">{{ category }}</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput3" class="form-label component-text-black ms-4">Resumo da solicitação</label>
+              <textarea placeholder="Descreva a ideia geral da sua sugestão de Projeto de Lei." [(ngModel)]="resumoDaSolicitacao" class="form-control" id="exampleFormControlInput3" rows="3" style="border-radius: 1.5rem !important;"></textarea>
+            </div>
+            <!-- <div class="mb-5">
+              <label for="exampleFormControlInput4" class="form-label component-text-black ms-4">Anexo</label>
+              <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4" placeholder="Anexar documento (opcional)">
+            </div> -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput4" class="form-label component-text-black ms-4">Anexo</label>
+              <!-- <label for="exampleFormControlInput4" class="form-control file-custom" style="height: 3.5rem; display: flex; justify-content: flex-end; align-items: center;"> -->
+              <label for="exampleFormControlInput4" class="form-control file-custom" style="height: 3.5rem; display: flex; align-items: center;">
+                <p class="m-0 pe-5" style="color:#7e868c">Anexar documento (opcional)</p>
+                <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4">
+                <img src="../../assets/icone-anexo.svg" alt="ícone de câmera">
+                <!-- <div class="row">
+                  <div class="col-9">
+                    <p>Anexar documento (opcional)</p>
+                    <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4" placeholder="Anexar documento (opcional)">
+                  </div>
+                  <div class="col-3">
+                    <img src="../../assets/icone-anexo.png" alt="ícone de câmera">
+                  </div>
+                </div> -->
+              </label>
+            </div>
+            <div class="text-center">
+              <div class="mb-3 d-grid gap-2">
+                <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="sendProposal()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'sugerir-projetos-de-leis'">
+    </app-footer>
+  </div>
+</ion-content>
