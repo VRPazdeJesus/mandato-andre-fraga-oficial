@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'projeto-de-lei',
     loadChildren: () => import('./projeto-de-lei/projeto-de-lei.module').then( m => m.ProjetoDeLeiPageModule)
   },
+  {
+    path: 'ideias',
+    loadChildren: () => import('./ideias/ideias.module').then( m => m.IdeiasPageModule)
+  },
 ];
 
 @NgModule({
