@@ -21,9 +21,14 @@ export class CadastroUsuarioPage implements OnInit {
   private password: string
   private confirmPassword: string
 
+  private caracterInvalid: boolean
+  private numberCaracter: boolean
+
   constructor(private nav: NavController, private firebaseService: FirebaseService) { }
 
   ngOnInit() {
+    this.caracterInvalid = false
+    this.numberCaracter = false
   }
 
   proximo(values:any) {
@@ -51,6 +56,42 @@ export class CadastroUsuarioPage implements OnInit {
     this.firebaseService.register(data).then(res => {
       this.proximo('colabore-dashboard')
     })
+  }
+
+  passwordChange(event: any) {
+
+    if(event.split("").length < 8) {
+      this.numberCaracter = true
+      console.log('number caracter invalid')
+    } else {
+      this.numberCaracter = false
+    }
+
+    if(event.includes(".") || 
+      event.includes("$") || 
+      event.includes("#") || 
+      event.includes("[") || 
+      event.includes("]") || 
+      event.includes("/") ||
+      event.includes("!") ||
+      event.includes("@") ||
+      event.includes("%") ||
+      event.includes("*") ||
+      event.includes("(") ||
+      event.includes(")") ||
+      event.includes("-") ||
+      event.includes("|")) {
+        this.caracterInvalid = true
+        console.log('invalid caracter')
+    } else {
+      this.caracterInvalid = false
+    }
+
+    if(event.split("").length === 0) {
+      this.numberCaracter = false
+      this.caracterInvalid = false
+    }
+    
   }
 
 }
