@@ -1,0 +1,43 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>PROJETOS DE LEI E DE INDICAÇÃO</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('nosso-mandato')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/projeto-de-lei.svg" alt="Projetos de lei">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer z-index-down">
+        <p class="component-text-black mt-4">Projeto de lei é um tipo de proposta normativa submetida à deliberação de um órgão legislativo, com o objetivo de produzir uma lei. Normalmente, um projeto de lei depende ainda da aprovação ou veto pelo Poder Executivo antes de entrar em vigor.</p>
+        <p class="component-text-black">Projetos de Indicação são sugestões de matéria que podem tornar-se lei. As indicações são enviadas pelos Vereadores ao Poder Executivo e assim, se o Prefeito e sua equipe julgarem importante a matéria ao município, será devolvido a indicação em forma de Projeto de Lei para que seja votado em Sessão Plenária.</p>
+        <p class="component-text-black">Abaixo estão Projetos de Lei e de Indicação enviados por mim ao Poder Executivo:</p>
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+
+    </div>
+  </div>
+  <!-- rodapé -->
+  <app-footer [page]="'projeto-de-lei'">
+  </app-footer>
+</ion-content>

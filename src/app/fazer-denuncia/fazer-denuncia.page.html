@@ -1,0 +1,91 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Sair</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>FAZER DENÚNCIAS</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore-dashboard')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/icon-fazer-denuncias.svg" alt="Sugerir projetos de lei">
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 space-to-footer">
+          <div class="mt-4">
+            <div class="mb-3">
+              <label for="exampleFormControlInput0" class="form-label component-text-black ms-4">Fazer upload de foto da denúncia</label>
+              <label for="exampleFormControlInput0" class="form-control" style="height: 100px; display: flex; justify-content: center; align-items: center;">
+                <img src="../../assets/icon-camera.svg" alt="ícone de câmera">
+                <input [(ngModel)]="fotoDenuncia" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput0">
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label component-text-black ms-4">Título da Denúncia</label>
+              <input [(ngModel)]="tituloDoProjeto" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite aqui o título da sua denúncia">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput12" class="form-label component-text-black ms-4">Localização do que motivou a denúncia</label>
+              <input [(ngModel)]="bairroDoProjeto" type="text" class="form-control" id="exampleFormControlInput12" placeholder="Digite aqui o endereço da localização">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput13" class="form-label component-text-black ms-4">Ponto de referência</label>
+              <input [(ngModel)]="entidadeDoProjeto" type="text" class="form-control" id="exampleFormControlInput13" placeholder="Digite ponto de referência">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput4" class="form-label component-text-black ms-4">Anexo</label>
+              <!-- <label for="exampleFormControlInput4" class="form-control file-custom" style="height: 3.5rem; display: flex; justify-content: flex-end; align-items: center;"> -->
+              <label for="exampleFormControlInput4" class="form-control file-custom" style="height: 3.5rem; display: flex; align-items: center;">
+                <p class="m-0 pe-5" style="color:#7e868c">Anexar documento (opcional)</p>
+                <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4">
+                <img src="../../assets/icone-anexo.svg" alt="ícone de câmera">
+                <!-- <div class="row">
+                  <div class="col-9">
+                    <p>Anexar documento (opcional)</p>
+                    <input [(ngModel)]="fileName" (change)="handleFileInput($event.target.files)" type="file" class="form-control" id="exampleFormControlInput4" placeholder="Anexar documento (opcional)">
+                  </div>
+                  <div class="col-3">
+                    <img src="../../assets/icone-anexo.png" alt="ícone de câmera">
+                  </div>
+                </div> -->
+              </label>
+            </div>
+            <div class="mb-5">
+              <label for="exampleFormControlInput3" class="form-label component-text-black ms-4">Detalhes da denúncia</label>
+              <textarea placeholder="Descreva seu problema com detalhes e, se possível, informando como gostaria que eu o ajudasse." [(ngModel)]="resumoDaSolicitacao" class="form-control" id="exampleFormControlInput3" rows="3" style="border-radius: 1.5rem !important;"></textarea>
+            </div>
+            <div class="text-center">
+              <div class="mb-3 d-grid gap-2">
+                <button class="btn btn-block btn-secondary btn-colabore" ion-button (click)="sendProposal()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- rodapé -->
+    <app-footer [page]="'fazer-denuncia'">
+    </app-footer>
+  </div>
+  
+  
+</ion-content>

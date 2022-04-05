@@ -43,6 +43,22 @@ const routes: Routes = [
     path: 'nosso-mandato',
     loadChildren: () => import('./nosso-mandato/nosso-mandato.module').then( m => m.NossoMandatoPageModule)
   },
+  {
+    path: 'fazer-denuncia',
+    loadChildren: () => import('./fazer-denuncia/fazer-denuncia.module').then( m => m.FazerDenunciaPageModule)
+  },
+  {
+    path: 'sugerir-projeto-de-leis',
+    loadChildren: () => import('./sugerir-projeto-de-leis/sugerir-projeto-de-leis.module').then( m => m.SugerirProjetoDeLeisPageModule)
+  },
+  {
+    path: 'projeto-de-lei',
+    loadChildren: () => import('./projeto-de-lei/projeto-de-lei.module').then( m => m.ProjetoDeLeiPageModule)
+  },
+  {
+    path: 'ideias',
+    loadChildren: () => import('./ideias/ideias.module').then( m => m.IdeiasPageModule)
+  },
 ];
 
 @NgModule({

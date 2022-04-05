@@ -79,7 +79,11 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput8" class="form-label component-text-black ms-4">Senha</label>
-            <input [(ngModel)]="password" type="password" class="form-control" id="exampleFormControlInput8" placeholder="Digite senha de ao menos 8 dígitos">
+            <input [(ngModel)]="password" (ngModelChange)="passwordChange($event)" type="password" class="form-control" id="exampleFormControlInput8" placeholder="Digite senha de ao menos 8 dígitos">
+          </div>
+          <div class="mb-3">
+            <p *ngIf="numberCaracter" class="color-red">Senha com menos de 8 caracter</p>
+            <p *ngIf="caracterInvalid" class="color-red">Uso de caracter inválido na senha</p>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput9" class="form-label component-text-black ms-4">Confirmar senha</label>

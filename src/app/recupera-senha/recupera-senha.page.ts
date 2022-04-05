@@ -21,7 +21,6 @@ export class RecuperaSenhaPage implements OnInit {
   }
 
   recoveryPassword() {
-    console.log('this.email', this.email)
     this.firebaseService.recoveryPassword(this.email).then(res => {
       this.response = 'E-mail enviado com sucesso'
       this.email = ''
