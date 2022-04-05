@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'ideias',
     loadChildren: () => import('./ideias/ideias.module').then( m => m.IdeiasPageModule)
   },
+  {
+    path: 'resposta-de-envio',
+    loadChildren: () => import('./resposta-de-envio/resposta-de-envio.module').then( m => m.RespostaDeEnvioPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,101 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5" src="../../assets/logo-cerebro.png" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Sair</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>{{ dataResponse.titlePage }}</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('colabore-dashboard')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/43-ideias.png" alt="Ideias para Salvador">
+      </div> -->
+      <div class="col-md-12 space-to-footer">
+        <p [class]="dataResponse.sucessResponse === true ? 'component-text-success mt-4' : 'component-text-danger mt-4'">{{ dataResponse.titleContent }}</p>
+        <p class="component-text-black mt-4">{{ dataResponse.descriptionContent }}</p>
+        <div class="row mt-5 mb-5">
+          <div class="col-12 text-center">
+            <img [src]="dataResponse.sucessResponse === true ? '../../assets/icon-toca-aqui.png' : '../../assets/icone-negativo.png'" alt="ícone do conteúdo">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6 text-center">
+            <button type="button" class="btn btn-light-green btn-response fw-bold" (click)="proximo('colabore')">Outra colaboração</button>
+          </div>
+          <div class="col-6 text-center">
+            <button type="button" class="btn btn-secondary btn-response fw-bold" (click)="proximo(dataResponse.pageURL)">Novo projeto</button>
+          </div>
+        </div>
+      </div>
+      <!-- rodapé -->
+      <footer class="footer mt-auto py-3 component-footer z-index-up">
+        <div class="container">
+          <div class="row">
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ME SEGUE LÁ</h6>
+            </div>
+            <!-- ícones -->
+            <div class="col-12 text-center inline-father">
+              <a href="https://twitter.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-twitter.png" alt="Twitter">
+                </div>
+              </a>
+              <a href="https://www.facebook.com/euandrefraga" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-facebook.png" alt="Facebook">
+                </div>
+              </a>
+              <a href="https://www.instagram.com/euandrefraga/" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-instagram.png" alt="Instagram">
+                </div>
+              </a>
+              <a href="https://www.youtube.com/channel/UC7BSLZW3MscGlXvc1dpHekA" target="_blank">
+                <div class="inline-child space-icon">
+                  <img src="../../assets/icon-youtube.png" alt="YouTube">
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/andr%C3%A9-fraga-b7b15434" target="_blank">
+                <div class="inline-child">
+                  <img src="../../assets/icon-linkedin.png" alt="Linkedin">
+                </div>
+              </a>
+            </div>
+            <!-- divisor -->
+            <div class="col-12">
+              <hr class="footer-hr mt-4">
+            </div>
+            <!-- contato -->
+            <div class="col-12">
+              <p class="project-text-white fw-bold mb-1">ENTRE EM CONTATO</p>
+              <p class="project-text-white mb-0 txt-300">E-mail: andrefraga@cms.ba.gov</p>
+              <p class="project-text-white mb-0 txt-300">Telefone: 71 9 9318-4941</p>
+              <p class="project-text-white txt-300">Endereço: Rua Ruy Barbosa, nº27, Edf. Bahia Center, gabinete 33 - Centro - Salvador/BA</p>
+            </div>
+            <!-- titulo -->
+            <div class="col-12 text-center">
+              <h6 class="project-text-white">ANDRÉ FRAGA. TODOS OS DIREITOS RESERVADOS | 2021</h6>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</ion-content>
