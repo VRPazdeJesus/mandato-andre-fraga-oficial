@@ -32,21 +32,21 @@
         <div class="row">
           <div class="col-md-12">
             <!-- card ionic -->
-            <ion-card class="mt-4 radios-card-9">
+            <ion-card *ngFor="let project of projects" class="mt-4 radios-card-9">
               <div class="row">
                 <div class="col-1 lateral-line-purple"></div>
                 <div class="col-11 lateral-content">
                   <ion-card-header class="ps-0">
-                    <ion-card-title class="card-index-project">01</ion-card-title>
+                    <ion-card-title class="card-index-project">{{project.protocolo}}</ion-card-title>
                   </ion-card-header>
                   <ion-card-content class="ps-0">
                     <div class="row">
-                      <p class="fw-bold component-text-black">Criar um protocolo municipal para o enfrentamento de pandemias, considerando a experiência adquirida com o novo coronavírus.</p>
+                      <p class="fw-bold component-text-black">{{project.titulo}}</p>
                     </div>
                     <div class="row mt-3">
                       <div class="col-6 text-center">
                         <p class="fw-bold">Situação</p>
-                        <p>Em andamento</p>
+                        <p>{{project.situacao}}</p>
                       </div>
                       <div class="col-6 text-center">
                         <!-- <button type="button" class="btn btn-secondary btn-more" (click)="proximo('nosso-mandato')">Saiba mais</button> -->
