@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ideias',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IdeiasPage implements OnInit {
 
-  constructor() { }
+  constructor(private nav: NavController) { }
 
   ngOnInit() {
+  }
+
+  proximo(values:any) {
+    console.log(values)
+    this.nav.navigateForward('/'+values);
   }
 
 }
