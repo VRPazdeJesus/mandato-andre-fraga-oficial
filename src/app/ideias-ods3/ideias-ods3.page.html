@@ -1,0 +1,65 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>43 IDEIAS PARA SALVADOR</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('ideias')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/saude-bem-estar.svg" alt="Saúde e Bem-estar">
+      </div>
+    </div>
+  </div>
+  <div class="containder component-bg-grey">
+    <div class="row">
+      <div class="col-md-12 space-to-footer">
+        <!-- card ionic -->
+        <ion-card *ngFor="let ideia of ideias; let i = index" class="mt-4 radios-card-9">
+          <div class="row">
+            <div class="col-1 lateral-line"></div>
+            <div class="col-11 lateral-content">
+              <ion-card-header class="ps-0">
+                <ion-card-title class="card-index">{{i+1}}</ion-card-title>
+              </ion-card-header>
+            
+              <ion-card-content class="ps-0">
+                <div class="row">
+                  <p class="fw-bold component-text-black">{{ideia.titulo}}</p>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-6 text-center">
+                    <p class="fw-bold">Situação</p>
+                    <p>{{ideia.situacao}}</p>
+                  </div>
+                  <div class="col-6 text-center">
+                    <!-- <button type="button" class="btn btn-secondary btn-more" (click)="proximo('nosso-mandato')">Saiba mais</button> -->
+                  </div>
+                </div>
+              </ion-card-content>
+            </div>
+          </div>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <!-- rodapé -->
+  <app-footer [page]="'ideias-ods3'">
+  </app-footer>
+</ion-content>

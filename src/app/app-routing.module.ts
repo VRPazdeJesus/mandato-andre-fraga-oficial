@@ -63,6 +63,10 @@ const routes: Routes = [
     path: 'resposta-de-envio',
     loadChildren: () => import('./resposta-de-envio/resposta-de-envio.module').then( m => m.RespostaDeEnvioPageModule)
   },
+  {
+    path: 'ideias-ods3',
+    loadChildren: () => import('./ideias-ods3/ideias-ods3.module').then( m => m.IdeiasOds3PageModule)
+  },
 ];
 
 @NgModule({
