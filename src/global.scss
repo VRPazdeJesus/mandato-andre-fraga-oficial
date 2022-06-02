@@ -410,6 +410,10 @@ ion-content {
     opacity: 0.4;
 }
 
+.lateral-line-purple {
+    background: rgba(77, 37, 108, 1);
+}
+
 .lateral-content {
     background: #F9F9F9;
 }
@@ -422,6 +426,12 @@ ion-content {
     font-weight: bold;
     font-size: 2rem;
     color: #006116;
+}
+
+.card-index-project {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #606060;
 }
 
 .form-control {
