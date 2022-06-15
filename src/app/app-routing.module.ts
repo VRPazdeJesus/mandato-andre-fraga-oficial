@@ -71,6 +71,10 @@ const routes: Routes = [
     path: 'ideias-ods4',
     loadChildren: () => import('./ideias-ods4/ideias-ods4.module').then( m => m.IdeiasOds4PageModule)
   },
+  {
+    path: 'ideias-ods13',
+    loadChildren: () => import('./ideias-ods13/ideias-ods13.module').then( m => m.IdeiasOds13PageModule)
+  },
 ];
 
 @NgModule({
