@@ -1,0 +1,72 @@
+<ion-content>
+  <!-- menu -->
+  <nav class="navbar navbar-expand-lg personal-navbar fixed-top">
+    <div class="container-fluid">
+      <img class="space-left-5 size-logo" src="../../assets/logo-cerebro-andre-fraga.svg" alt="André Fraga" (click)="proximo('home')">
+      <button class="btn personal-btn-login" (click)="proximo('colabore')">Login</button>
+    </div>
+    <div class="container-fluid mt-2 force-center">
+      <div class="row">
+        <div class="col-12 personal-titles-menu component-active mt-2"><span>PROJETOS DE LEI E DE INDICAÇÃO</span></div>
+      </div>
+    </div>
+  </nav>
+  <!-- botão voltar -->
+  <div class="container component-space-nav-8">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-secondary btn-back" (click)="proximo('nosso-mandato')"><span class="fas fa-angle-left"></span>  Voltar</button>
+      </div>
+    </div>
+  </div>
+  <!-- logo Nosso Mandato -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mt-3">
+        <img src="../../assets/fiscalizacao.svg" alt="Fiscalização">
+      </div>
+      <div class="col-md-12 component-bg-grey space-to-footer z-index-down">
+        <p class="component-text-black mt-4">Além de legislar, outra função importante do vereador é a de fiscalizar o poder executivo municipal, cujos representantes são o prefeito e o vice-prefeito.</p>
+        <p class="component-text-black mt-4">É papel do vereador, portanto, representar a sociedade em sua pluralidade de interesses e  garantir que as políticas públicas estejam sendo implementadas de fato.</p>
+        <p class="component-text-black mt-4">Acompanhe, a seguir, as minhas ações de fiscalização e seus respectivos efeitos:</p>
+        <div class="row">
+          <div class="col-md-12">
+            <!-- card ionic -->
+            <ion-card *ngFor="let project of projects" class="mt-4 radios-card-9">
+              <div class="row">
+                <div class="col-1 lateral-line-purple"></div>
+                <div class="col-11 lateral-content">
+                  <ion-card-header class="ps-0">
+                    <ion-card-title class="card-index-project">{{project.protocolo}}</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content class="ps-0">
+                    <div class="row">
+                      <p class="fw-bold component-text-black">{{project.titulo}}</p>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-6 text-center">
+                        <p class="fw-bold">Situação</p>
+                        <p>{{project.situacao}}</p>
+                      </div>
+                      <div class="col-6 text-center">
+                        <!-- <button type="button" class="btn btn-secondary btn-more" (click)="proximo('nosso-mandato')">Saiba mais</button> -->
+                      </div>
+                    </div>
+                  </ion-card-content>
+                </div>
+              </div>
+            </ion-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="component-bg-grey">
+    <div class="container">
+
+    </div>
+  </div>
+  <!-- rodapé -->
+  <app-footer [page]="'projeto-de-lei'">
+  </app-footer>
+</ion-content>
